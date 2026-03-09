@@ -1,14 +1,33 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /thanks
+
+# 주요 검색 엔진
 User-agent: Googlebot
 Allow: /
 
 User-agent: Bingbot
 Allow: /
 
+# 네이버 / 카카오
+User-agent: Yeti
+Allow: /
+
+User-agent: Daum
+Allow: /
+
+# SNS
 User-agent: Twitterbot
 Allow: /
 
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
+User-agent: LinkedInBot
 Allow: /
+
+User-agent: kakaotalk-scrap
+Allow: /
+
+Sitemap: https://merini.com/sitemap.xml
