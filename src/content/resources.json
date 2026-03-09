@@ -1,0 +1,62 @@
+{
+  "guides": [
+    {
+      "id": "guide-001",
+      "category": "guide",
+      "title": "MT5 설정 가이드",
+      "description": "PC/Mobile 설치부터 차트 설정까지",
+      "link": "/guide/mt5-pc",
+      "icon": "Monitor"
+    },
+    {
+      "id": "guide-002",
+      "category": "guide",
+      "title": "TradingView 연동",
+      "description": "알람 → MT5 자동 주문 연결",
+      "link": null,
+      "icon": "TrendingUp",
+      "comingSoon": true
+    },
+    {
+      "id": "guide-003",
+      "category": "guide",
+      "title": "백테스트 체크리스트",
+      "description": "테스트 전 확인사항 10가지",
+      "link": "/downloads/backtest-checklist.txt",
+      "icon": "ClipboardCheck",
+      "isDownload": true
+    }
+  ],
+  "downloads": [
+    {
+      "id": "download-001",
+      "category": "download",
+      "title": "전략 템플릿 (Notion)",
+      "description": "진입/청산/리스크 정리 양식",
+      "format": "Notion",
+      "link": "https://notion.so",
+      "icon": "FileText",
+      "isExternal": true
+    },
+    {
+      "id": "download-002",
+      "category": "download",
+      "title": "MT5 차트 프리셋",
+      "description": "다크 테마 + 인디케이터 세팅",
+      "format": ".tpl",
+      "link": "/downloads/mt5-chart-preset.tpl",
+      "icon": "Palette",
+      "isDownload": true
+    },
+    {
+      "id": "download-003",
+      "category": "download",
+      "title": "거래 일지 스프레드시트",
+      "description": "일별 성과 기록 및 분석",
+      "format": "CSV",
+      "link": "/downloads/trading-journal.csv",
+      "icon": "FileSpreadsheet",
+      "isDownload": true
+    }
+  ]
+}

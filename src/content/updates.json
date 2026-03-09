@@ -1,0 +1,27 @@
+[
+  {
+    "id": "update-001",
+    "type": "strategy",
+    "title": "NQ 스캘핑 EA v2.1 패치",
+    "description": "진입 필터 개선, 뉴스 시간대 자동 스킵",
+    "date": "2025.01.05",
+    "link": "/marketplace",
+    "badge": "NEW"
+  },
+  {
+    "id": "update-002",
+    "type": "broker",
+    "title": "IC Markets 서버 점검 안내",
+    "description": "1/7 (토) 02:00~04:00 KST 거래 중단",
+    "date": "2025.01.04",
+    "link": "/community"
+  },
+  {
+    "id": "update-003",
+    "type": "system",
+    "title": "새 백테스트 리포트 양식 적용",
+    "description": "드로우다운 시각화 및 월별 분석 추가",
+    "date": "2025.01.02",
+    "link": "/resources"
+  }
+]

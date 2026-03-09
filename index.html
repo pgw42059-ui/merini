@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" href="/favicon.ico" />
+
+    <!-- Primary Meta Tags -->
+    <title>메린이 — 선물 트레이더를 위한 시장 판단 플랫폼</title>
+    <meta name="title" content="메린이 — 선물 트레이더를 위한 시장 판단 플랫폼" />
+    <meta name="description" content="실시간 시장 상태, 실행 환경 비교, 리스크 관리 참고 정보를 제공하는 트레이더 의사결정 플랫폼입니다.">
+    <meta name="author" content="메린이" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://merini.com" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://merini.com" />
+
+    <meta property="og:image" content="https://merini.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:site_name" content="메린이" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://merini.com" />
+
+    <meta name="twitter:image" content="https://merini.com/og-image.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- JSON-LD Organization -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "메린이",
+        "url": "https://merini.com",
+        "logo": "https://merini.com/og-image.png",
+        "description": "선물 트레이더를 위한 시장 판단 및 실행 환경 정보 플랫폼",
+        "sameAs": []
+      }
+    </script>
+    
+    
+    
+    
+    <meta property="og:title" content="메린이 — 선물 트레이더를 위한 시장 판단 플랫폼">
+  <meta name="twitter:title" content="메린이 — 선물 트레이더를 위한 시장 판단 플랫폼">
+  <meta property="og:description" content="실시간 시장 상태, 실행 환경 비교, 리스크 관리 참고 정보를 제공하는 트레이더 의사결정 플랫폼입니다.">
+  <meta name="twitter:description" content="실시간 시장 상태, 실행 환경 비교, 리스크 관리 참고 정보를 제공하는 트레이더 의사결정 플랫폼입니다.">
+</head>
+
+  <body>
+    <script>
+      // Restore path from GitHub Pages 404.html redirect
+      (function(l) {
+        if (l.search[1] === 'p') {
+          var params = l.search.slice(1).split('&').reduce(function(acc, s) {
+            var kv = s.split('='); acc[kv[0]] = kv.slice(1).join('=').replace(/~and~/g, '&'); return acc;
+          }, {});
+          window.history.replaceState(null, null,
+            '/' + (params.p || '') + (params.q ? '?' + params.q : '') + l.hash
+          );
+        }
+      }(window.location));
+    </script>
+    <script>
+      (function() {
+        var stored = localStorage.getItem('theme');
+        if (stored === 'light') {
+          document.documentElement.classList.remove('dark');
+        } else {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

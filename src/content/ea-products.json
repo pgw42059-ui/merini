@@ -1,0 +1,71 @@
+[
+  {
+    "id": "ea-001",
+    "name": "Grid Master",
+    "type": "그리드",
+    "category": "grid",
+    "pricing": "free",
+    "description": "변동성 구간에서 작동하는 그리드 전략. 횡보장 특화.",
+    "riskNote": "추세장에서 드로우다운 주의",
+    "backtestYears": 10,
+    "mqlLink": "https://www.mql5.com/en/market",
+    "badge": "인기"
+  },
+  {
+    "id": "ea-002",
+    "name": "Trend Follower",
+    "type": "추세추종",
+    "category": "trend",
+    "pricing": "premium",
+    "description": "명확한 추세에서만 진입. 횡보장에서는 대기합니다.",
+    "riskNote": "거래 빈도 낮음, 인내 필요",
+    "backtestYears": 8,
+    "mqlLink": "https://www.mql5.com/en/market"
+  },
+  {
+    "id": "ea-003",
+    "name": "Scalp Engine",
+    "type": "스캘핑",
+    "category": "scalping",
+    "pricing": "free",
+    "description": "단기 변동성 포착. 빠른 진입과 청산.",
+    "riskNote": "스프레드와 슬리피지에 민감",
+    "backtestYears": 5,
+    "mqlLink": "https://www.mql5.com/en/market",
+    "badge": "NEW"
+  },
+  {
+    "id": "ea-004",
+    "name": "Breakout Hunter",
+    "type": "돌파",
+    "category": "breakout",
+    "pricing": "premium",
+    "description": "주요 지지/저항 돌파 시 진입. 변동성 확장 구간에 강점.",
+    "riskNote": "가짜 돌파에 취약, 필터 필요",
+    "backtestYears": 7,
+    "mqlLink": "https://www.mql5.com/en/market",
+    "badge": "추천"
+  },
+  {
+    "id": "ea-005",
+    "name": "Mean Reversion Pro",
+    "type": "평균회귀",
+    "category": "meanreversion",
+    "pricing": "premium",
+    "description": "과매수/과매도 구간에서 반전 진입. 레인지 마켓에 최적화.",
+    "riskNote": "강한 추세장에서 손실 가능",
+    "backtestYears": 6,
+    "mqlLink": "https://www.mql5.com/en/market"
+  },
+  {
+    "id": "ea-006",
+    "name": "News Trader",
+    "type": "뉴스",
+    "category": "news",
+    "pricing": "free",
+    "description": "주요 경제 지표 발표 시 변동성을 활용한 전략.",
+    "riskNote": "슬리피지와 스프레드 확대 주의",
+    "backtestYears": 3,
+    "mqlLink": "https://www.mql5.com/en/market"
+  }
+]
