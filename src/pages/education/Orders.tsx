@@ -10,6 +10,8 @@ import {
   ImageIcon,
   Play,
 } from "lucide-react";
+import { PageSEO } from "@/components/PageSEO";
+import { RelatedContent } from "@/components/RelatedContent";
 
 // ─── 미디어 슬롯 컴포넌트 ────────────────────────────────────────────────────
 // 이미지 추가 방법:  image 필드에 "/orders/파일명.png" 입력 → public/orders/ 폴더에 저장
@@ -27,7 +29,6 @@ const MediaSlot = ({ image, youtube, label }: MediaSlotProps) => {
   if (youtube) {
     return (
       <div className="w-full aspect-video rounded-xl overflow-hidden border border-border/30 bg-black">
-      <PageSEO title="MT5 주문 방법 — 시장가·지정가·SL/TP 완전 가이드" description="MetaTrader 5에서 시장가, 지정가, 스톱 주문, 손절/익절 설정 방법을 상세히 설명합니다." path="/guides/orders" isHowTo={true} />
         <iframe
           className="w-full h-full"
           src={`https://www.youtube.com/embed/${youtube}`}
@@ -222,6 +223,8 @@ interface ItemCardProps {
   media: { image?: string; youtube?: string };
 }
 
+// ─── 카드 컴포넌트 ────────────────────────────────────────────────────────────
+
 const ItemCard = ({ name, sub, desc, how, warn, warnType, color, bg, border, dot, media }: ItemCardProps) => (
   <div className={`rounded-2xl border overflow-hidden ${border} bg-secondary/10`}>
     {/* 헤더 */}
@@ -272,14 +275,13 @@ const ItemCard = ({ name, sub, desc, how, warn, warnType, color, bg, border, dot
     </div>
   </div>
 );
-import { PageSEO } from "@/components/PageSEO";
-import { RelatedContent, RelatedItem } from "@/components/RelatedContent";
 
 // ─── 메인 페이지 ──────────────────────────────────────────────────────────────
 
 const Orders = () => {
   return (
     <div className="max-w-3xl">
+      <PageSEO title="MT5 주문 방법 — 시장가·지정가·SL/TP 완전 가이드" description="MetaTrader 5에서 시장가, 지정가, 스톱 주문, 손절/익절 설정 방법을 상세히 설명합니다." path="/guides/orders" isHowTo={true} />
 
       {/* 브레드크럼 */}
       <div className="flex items-center gap-2 text-xs text-muted-foreground mb-5">
