@@ -28,6 +28,16 @@ export default defineConfig(({ mode }) => {
     build: {
       target: "es2018",
       sourcemap: false,
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            "vendor-react": ["react", "react-dom", "react-router-dom"],
+            "vendor-ui": ["@radix-ui/react-slot", "@radix-ui/react-toast", "@radix-ui/react-tooltip", "lucide-react"],
+            "vendor-query": ["@tanstack/react-query"],
+            "vendor-helmet": ["react-helmet-async"],
+          },
+        },
+      },
     },
   };
 });

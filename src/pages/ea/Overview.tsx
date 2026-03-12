@@ -44,7 +44,14 @@ const guides = [
 const EAOverview = () => {
   return (
     <div className="container px-4 py-8 max-w-4xl mx-auto">
-      <PageSEO title="EA 자동매매 완전 정복 — MT5 Expert Advisor" description="MetaTrader 5 EA 자동매매 설치, 설정, 백테스트, VPS 운영까지 완전 가이드." path="/ea" />
+      <PageSEO title="EA 자동매매 완전 정복 — MT5 Expert Advisor" description="MetaTrader 5 EA 자동매매 설치, 설정, 백테스트, VPS 운영까지 완전 가이드." path="/ea"
+        faqs={[
+          { question: "EA 자동매매란 무엇인가요?", answer: "EA(Expert Advisor)는 MetaTrader 5에서 실행되는 자동매매 프로그램입니다. 미리 설정한 조건에 따라 자동으로 매수/매도 주문을 실행합니다." },
+          { question: "EA 사용에 코딩 지식이 필요한가요?", answer: "아닙니다. MQL5 마켓에서 이미 만들어진 EA를 구매하거나 무료로 다운로드해 사용할 수 있습니다. 코딩 없이 MT5에 설치하고 파라미터만 설정하면 됩니다." },
+          { question: "EA를 24시간 운영하려면 어떻게 해야 하나요?", answer: "VPS(가상 사설 서버)를 사용하면 컴퓨터를 끄더라도 24시간 EA를 운영할 수 있습니다. 월 $10~30 수준의 비용으로 안정적인 자동매매 환경을 구축할 수 있습니다." },
+          { question: "백테스트란 무엇이고 왜 필요한가요?", answer: "백테스트는 EA 전략을 과거 가격 데이터로 시뮬레이션해 성과를 검증하는 과정입니다. 실제 자금을 투입하기 전에 반드시 백테스트로 전략의 수익성과 리스크를 확인해야 합니다." },
+        ]}
+      />
       {/* Header */}
       <div className="mb-8">
         <div className="flex items-center gap-3 mb-3">

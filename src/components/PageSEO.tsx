@@ -5,6 +5,11 @@ interface BreadcrumbItem {
   path: string;
 }
 
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
 interface PageSEOProps {
   title: string;
   description: string;
@@ -12,6 +17,7 @@ interface PageSEOProps {
   type?: "website" | "article";
   breadcrumbs?: BreadcrumbItem[];
   isHowTo?: boolean;
+  faqs?: FAQItem[];
 }
 
 const BASE_URL = "https://merini.com";
@@ -23,6 +29,7 @@ export const PageSEO = ({
   type = "website",
   breadcrumbs,
   isHowTo = false,
+  faqs,
 }: PageSEOProps) => {
   const url = `${BASE_URL}${path}`;
   const fullTitle = path === "/" ? `${title} | 메린이` : `${title} | 메린이`;
@@ -62,6 +69,18 @@ export const PageSEO = ({
         isPartOf: { "@type": "WebSite", url: BASE_URL, name: "메린이" },
       };
 
+  const faqSchema = faqs && faqs.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: { "@type": "Answer", text: faq.answer },
+        })),
+      }
+    : null;
+
   return (
     <Helmet>
       <title>{fullTitle}</title>
@@ -77,6 +96,9 @@ export const PageSEO = ({
         {JSON.stringify(breadcrumbSchema)}
       </script>
       <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
+      {faqSchema && (
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+      )}
     </Helmet>
   );
 };

@@ -434,7 +434,13 @@ const relatedItems: RelatedItem[] = [
 const MT5PCGuide = () => {
   return (
     <div className="max-w-3xl">
-      <PageSEO title="MT5 PC 설치 방법 — 7단계 완전 가이드" description="MetaTrader 5 PC 버전 무료 다운로드부터 브로커 서버 연결, 첫 로그인까지 단계별로 안내합니다." path="/guides/mt5-pc" isHowTo={true} />
+      <PageSEO title="MT5 PC 설치 방법 — 7단계 완전 가이드" description="MetaTrader 5 PC 버전 무료 다운로드부터 브로커 서버 연결, 첫 로그인까지 단계별로 안내합니다." path="/guides/mt5-pc" isHowTo={true}
+        faqs={[
+          { question: "MT5는 어디서 무료로 다운로드할 수 있나요?", answer: "MetaQuotes 공식 사이트(metaquotes.net) 또는 브로커 홈페이지에서 무료로 다운로드할 수 있습니다. 브로커에서 제공하는 버전을 사용하면 브로커 서버가 자동으로 설정됩니다." },
+          { question: "MT5 설치 후 어떤 브로커 서버를 선택해야 하나요?", answer: "이미 계좌를 개설한 브로커의 서버를 검색해 선택하세요. 실계좌는 Live 서버, 데모 계좌는 Demo 서버를 선택합니다." },
+          { question: "MT5가 실행되지 않을 때 어떻게 하나요?", answer: "Windows Defender나 백신 프로그램이 MT5를 차단하는 경우가 있습니다. 백신 예외 처리에 MT5를 추가하거나, 관리자 권한으로 실행해보세요." },
+        ]}
+      />
 
       {/* 브레드크럼 */}
       <div className="flex items-center gap-2 text-xs text-muted-foreground mb-5">

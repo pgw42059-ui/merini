@@ -11,7 +11,14 @@ const BrokerList = () => {
 
   return (
     <div className="container px-4 py-8 max-w-5xl mx-auto">
-      <PageSEO title="해외선물 브로커 비교 추천 — MT5 지원 브로커" description="MT5를 지원하는 해외선물 브로커를 수수료, 레버리지, 안전성, 한국어 지원으로 비교 분석합니다." path="/brokers" />
+      <PageSEO title="해외선물 브로커 비교 추천 — MT5 지원 브로커" description="MT5를 지원하는 해외선물 브로커를 수수료, 레버리지, 안전성, 한국어 지원으로 비교 분석합니다." path="/brokers"
+        faqs={[
+          { question: "해외선물 브로커 선택 시 가장 중요한 기준은?", answer: "규제 기관 등록 여부(FCA, ASIC, CySEC 등), 수수료와 스프레드, MT5 지원 여부, 한국어 고객 지원을 우선 확인하세요." },
+          { question: "MT5를 지원하는 브로커는 어디인가요?", answer: "Pepperstone, IC Markets, XM, FP Markets 등 주요 국제 브로커들이 MT5를 지원합니다. 각 브로커의 계좌 유형과 수수료 구조가 다르므로 비교 후 선택하세요." },
+          { question: "데모 계좌로 연습할 수 있나요?", answer: "네, 대부분의 브로커는 무료 데모 계좌를 제공합니다. 실제 시장 데이터로 리스크 없이 MT5 거래를 연습할 수 있습니다." },
+          { question: "브로커 계좌 개설에 최소 입금액은 얼마인가요?", answer: "브로커마다 다르지만, 많은 브로커들이 $200~$500의 최소 입금액을 요구합니다. 일부는 최소 입금액이 없거나 $100 이하인 경우도 있습니다." },
+        ]}
+      />
       <div className="mb-8">
         <h1 className="text-2xl md:text-3xl font-bold text-foreground mb-3">브로커 비교</h1>
         <p className="text-muted-foreground leading-relaxed">

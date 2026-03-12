@@ -115,7 +115,13 @@ const Consult = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <PageSEO title="무료 상담 신청 — MT5·해외선물 1:1 상담" description="해외선물 시작 방법, MT5 설정, 브로커 선택 등 트레이딩 입문 관련 무료 1:1 상담을 신청하세요." path="/consult" />
+      <PageSEO title="무료 상담 신청 — MT5·해외선물 1:1 상담" description="해외선물 시작 방법, MT5 설정, 브로커 선택 등 트레이딩 입문 관련 무료 1:1 상담을 신청하세요." path="/consult"
+        faqs={[
+          { question: "상담은 무료인가요?", answer: "네, 메린이의 1:1 상담은 완전 무료입니다. MT5 설정, 브로커 선택, 해외선물 입문 관련 질문을 자유롭게 남겨주세요." },
+          { question: "상담 답변은 얼마나 걸리나요?", answer: "일반적으로 영업일 기준 1~2일 이내에 답변을 드립니다. 카카오톡 채널을 통해 더 빠른 답변을 받으실 수 있습니다." },
+          { question: "어떤 내용을 상담할 수 있나요?", answer: "MT5 설치 및 설정 방법, 브로커 선택 기준, EA 자동매매 설치, 해외선물 기초 개념, 리스크 관리 방법 등 트레이딩 입문에 관한 모든 질문을 받습니다." },
+        ]}
+      />
       <Header />
       <main className="pt-20">
         {/* Hero */}

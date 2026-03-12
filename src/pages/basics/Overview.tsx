@@ -86,7 +86,14 @@ const whatYouLearn = [
 const BasicsOverview = () => {
   return (
     <div className="max-w-3xl">
-      <PageSEO title="해외선물 기초 교육 — MT5 입문 가이드" description="선물거래, FX, 레버리지 등 해외선물 핵심 개념을 초보자 눈높이로 설명합니다." path="/basics" />
+      <PageSEO title="해외선물 기초 교육 — MT5 입문 가이드" description="선물거래, FX, 레버리지 등 해외선물 핵심 개념을 초보자 눈높이로 설명합니다." path="/basics"
+        faqs={[
+          { question: "해외선물 거래란 무엇인가요?", answer: "해외선물은 나스닥, S&P500, 골드, 오일 등 해외 자산의 미래 가격을 약속하는 계약을 거래하는 것입니다. 레버리지를 활용해 적은 증거금으로 큰 규모의 거래가 가능합니다." },
+          { question: "해외선물 거래를 시작하려면 무엇이 필요한가요?", answer: "브로커 계좌 개설, MetaTrader 5(MT5) 설치, 증거금 입금이 필요합니다. 먼저 데모 계좌로 충분히 연습한 후 실거래를 시작하는 것을 권장합니다." },
+          { question: "MT5와 MT4의 차이는 무엇인가요?", answer: "MT5는 MT4보다 더 많은 주문 유형, 더 많은 기술 지표, 더 빠른 백테스트 엔진을 제공합니다. 해외선물 거래에는 MT5가 더 적합하며, 대부분의 브로커들이 MT5를 권장합니다." },
+          { question: "레버리지는 얼마나 높은가요?", answer: "브로커와 상품에 따라 다르지만, 해외선물은 일반적으로 1:20~1:100의 레버리지를 제공합니다. 레버리지가 높을수록 수익과 손실이 모두 확대되므로 신중한 리스크 관리가 필요합니다." },
+        ]}
+      />
       {/* 헤더 */}
       <div className="mb-8">
         <div className="flex items-center gap-2 text-xs text-muted-foreground mb-4">
