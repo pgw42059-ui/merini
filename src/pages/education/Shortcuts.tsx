@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { Keyboard, Info, ChevronLeft, ChevronRight } from "lucide-react";
+import { PageSEO } from "@/components/PageSEO";
+import { RelatedContent, RelatedItem } from "@/components/RelatedContent";
 
 const shortcutGroups = [
   {
@@ -69,6 +71,7 @@ const shortcutGroups = [
 const Shortcuts = () => {
   return (
     <div className="max-w-3xl">
+      <PageSEO title="MT5 단축키 모음 — 트레이딩 속도 높이기" description="MetaTrader 5 필수 단축키와 커스터마이징 방법으로 차트 분석과 주문 속도를 높이세요." path="/guides/shortcuts" />
 
       {/* 브레드크럼 */}
       <div className="flex items-center gap-2 text-xs text-muted-foreground mb-5">
@@ -142,6 +145,12 @@ const Shortcuts = () => {
                 </tbody>
               </table>
             </div>
+      <RelatedContent items={[
+          { title: "주문 방법", description: "빠른 주문을 위한 주문 가이드", href: "/guides/orders", badge: "가이드" },
+          { title: "지표 사용법", description: "차트 분석 속도 높이는 지표 설정", href: "/guides/indicators", badge: "가이드" },
+          { title: "MT5 PC 설치", description: "MT5 기본 설정과 환경 구성", href: "/guides/mt5-pc", badge: "설치" }
+        ]} />
+
           </section>
         ))}
       </div>

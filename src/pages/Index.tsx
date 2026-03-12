@@ -20,6 +20,7 @@ import logoMark from "@/assets/04-logo-mark.png";
 import iconAnalysis from "@/assets/icon-analysis.png";
 import iconTrading from "@/assets/icon-trading.png";
 import iconSecurity from "@/assets/icon-security.png";
+import { PageSEO } from "@/components/PageSEO";
 
 const features = [
   {
@@ -117,6 +118,7 @@ const quickLinks = [
 const Index = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <PageSEO title="MT5 해외선물 트레이딩 가이드 플랫폼" description="MetaTrader 5 설치부터 EA 자동매매, 브로커 비교까지. 해외선물 입문자를 위한 단계별 가이드 플랫폼입니다." path="/" />
       <Header />
       <main className="flex-1 pt-14">
 

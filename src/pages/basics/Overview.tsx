@@ -11,6 +11,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { AdPlaceholder } from "@/components/AdPlaceholder";
+import { PageSEO } from "@/components/PageSEO";
 
 const courses = [
   {
@@ -85,6 +86,7 @@ const whatYouLearn = [
 const BasicsOverview = () => {
   return (
     <div className="max-w-3xl">
+      <PageSEO title="해외선물 기초 교육 — MT5 입문 가이드" description="선물거래, FX, 레버리지 등 해외선물 핵심 개념을 초보자 눈높이로 설명합니다." path="/basics" />
       {/* 헤더 */}
       <div className="mb-8">
         <div className="flex items-center gap-2 text-xs text-muted-foreground mb-4">

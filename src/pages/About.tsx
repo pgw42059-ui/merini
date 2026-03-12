@@ -8,10 +8,12 @@ import {
   AlertTriangle,
   BookOpen
 } from "lucide-react";
+import { PageSEO } from "@/components/PageSEO";
 
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PageSEO title="메린이 소개 — 선물 트레이더를 위한 플랫폼" description="메린이는 해외선물·FX 입문자를 위한 MT5 가이드, 브로커 비교, EA 자동매매 정보 플랫폼입니다." path="/about" />
       <Header />
       <main className="pt-20">
         {/* Hero */}

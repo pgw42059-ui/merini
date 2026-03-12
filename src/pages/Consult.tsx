@@ -15,6 +15,7 @@ import {
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
+import { PageSEO } from "@/components/PageSEO";
 
 const Consult = () => {
   const navigate = useNavigate();
@@ -114,6 +115,7 @@ const Consult = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <PageSEO title="무료 상담 신청 — MT5·해외선물 1:1 상담" description="해외선물 시작 방법, MT5 설정, 브로커 선택 등 트레이딩 입문 관련 무료 1:1 상담을 신청하세요." path="/consult" />
       <Header />
       <main className="pt-20">
         {/* Hero */}

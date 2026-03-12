@@ -1,6 +1,8 @@
 import { DollarSign, AlertTriangle, ChevronRight, ArrowRight, ArrowLeft, Clock, Info } from "lucide-react";
 import { Link } from "react-router-dom";
 import { AdPlaceholder } from "@/components/AdPlaceholder";
+import { PageSEO } from "@/components/PageSEO";
+import { RelatedContent } from "@/components/RelatedContent";
 
 const majorPairs = [
   {
@@ -76,6 +78,7 @@ const concepts = [
 const FX = () => {
   return (
     <article className="max-w-3xl">
+      <PageSEO title="FX 외환거래 기초 완전 이해" description="외환시장의 구조, 환율, 통화쌍 개념부터 MT5에서의 FX 거래 방법까지 안내합니다." path="/basics/fx" />
       {/* 브레드크럼 + 진행 표시 */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-2 text-xs text-muted-foreground">
@@ -247,6 +250,11 @@ const FX = () => {
           <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
         </Link>
       </div>
+          <RelatedContent items={[
+          { title: "선물거래 기초", description: "선물 계약 개념부터 이해하기", href: "/basics/futures", badge: "기초" },
+          { title: "레버리지란?", description: "증거금 계산과 리스크 관리", href: "/basics/leverage", badge: "기초" },
+          { title: "MT5 선택 이유", description: "MT5가 최적인 이유", href: "/guides/why-mt5", badge: "가이드" }
+        ]} />
     </article>
   );
 };

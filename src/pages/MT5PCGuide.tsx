@@ -11,6 +11,7 @@ import {
   Clock,
 } from "lucide-react";
 import { RelatedContent, RelatedItem } from "@/components/RelatedContent";
+import { PageSEO } from "@/components/PageSEO";
 
 // ─── Step Mockup Components ──────────────────────────────────────────────────
 
@@ -433,6 +434,7 @@ const relatedItems: RelatedItem[] = [
 const MT5PCGuide = () => {
   return (
     <div className="max-w-3xl">
+      <PageSEO title="MT5 PC 설치 방법 — 7단계 완전 가이드" description="MetaTrader 5 PC 버전 무료 다운로드부터 브로커 서버 연결, 첫 로그인까지 단계별로 안내합니다." path="/guides/mt5-pc" isHowTo={true} />
 
       {/* 브레드크럼 */}
       <div className="flex items-center gap-2 text-xs text-muted-foreground mb-5">

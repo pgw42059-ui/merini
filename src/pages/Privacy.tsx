@@ -1,10 +1,12 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Shield } from "lucide-react";
+import { PageSEO } from "@/components/PageSEO";
 
 const Privacy = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PageSEO title="개인정보처리방침 — 메린이" description="메린이의 개인정보 수집 및 이용에 관한 처리방침입니다." path="/privacy" />
       <Header />
       <main className="pt-20">
         <section className="py-16">

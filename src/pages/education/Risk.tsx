@@ -1,5 +1,6 @@
 import { Clock } from "lucide-react";
 import { RelatedContent, RelatedItem } from "@/components/RelatedContent";
+import { PageSEO } from "@/components/PageSEO";
 
 const topics = [
   {
@@ -38,6 +39,7 @@ const relatedItems: RelatedItem[] = [
 const Risk = () => {
   return (
     <>
+      <PageSEO title="해외선물 리스크 관리 — 자산 보호 전략" description="포지션 사이징, 손절 설정, 최대 손실 관리 등 해외선물 리스크 관리 방법을 안내합니다." path="/guides/risk" />
       {/* Hero */}
       <section className="py-16 border-b border-border/50">
         <div className="container px-4">

@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { PageSEO } from "@/components/PageSEO";
+import { RelatedContent, RelatedItem } from "@/components/RelatedContent";
 
 const sections = [
   {
@@ -43,6 +45,7 @@ const sections = [
 export default function BeforeMT5() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <PageSEO title="MT5 시작 전 준비사항 — 브로커 계좌 개설" description="MetaTrader 5 설치 전 필요한 브로커 선택, 계좌 개설, 데모 계좌 만드는 방법을 안내합니다." path="/guides/before-mt5" />
       <Header />
 
       <main className="flex-1">
@@ -126,6 +129,12 @@ export default function BeforeMT5() {
           </div>
         </div>
       </main>
+      <RelatedContent items={[
+          { title: "MT5 PC 설치", description: "MT5 설치부터 로그인까지 7단계", href: "/guides/mt5-pc", badge: "설치" },
+          { title: "브로커 비교", description: "MT5 지원 브로커 수수료·레버리지 비교", href: "/brokers", badge: "브로커" },
+          { title: "MT5 선택 이유", description: "MT5가 최적인 이유", href: "/guides/why-mt5", badge: "가이드" }
+        ]} />
+
 
       <Footer />
     </div>

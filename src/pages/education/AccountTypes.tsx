@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { Layers, CheckCircle2, XCircle, AlertTriangle, Info, ChevronLeft, ChevronRight, Clock } from "lucide-react";
+import { PageSEO } from "@/components/PageSEO";
+import { RelatedContent, RelatedItem } from "@/components/RelatedContent";
 
 const types = [
   {
@@ -66,6 +68,7 @@ const howToCheck = [
 const AccountTypes = () => {
   return (
     <div className="max-w-3xl">
+      <PageSEO title="MT5 계좌 유형 — Standard·ECN·Prime 차이" description="MetaTrader 5 Standard, ECN, Prime 계좌의 차이점과 트레이딩 스타일별 최적 계좌 선택 가이드." path="/guides/account-types" />
 
       {/* 브레드크럼 */}
       <div className="flex items-center gap-2 text-xs text-muted-foreground mb-5">
@@ -237,6 +240,11 @@ const AccountTypes = () => {
           <ChevronRight className="w-4 h-4" />
         </Link>
       </div>
+      <RelatedContent items={[
+          { title: "브로커 비교", description: "계좌 유형별 최적 브로커 추천", href: "/brokers", badge: "브로커" },
+          { title: "주문 방법", description: "계좌 개설 후 첫 주문 방법", href: "/guides/orders", badge: "가이드" },
+          { title: "EA 자동매매", description: "계좌 설정 후 EA 자동매매 시작", href: "/ea", badge: "EA" }
+        ]} />
     </div>
   );
 };

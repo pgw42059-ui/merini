@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { PageSEO } from "@/components/PageSEO";
+import { RelatedContent, RelatedItem } from "@/components/RelatedContent";
 
 const advantages = [
   {
@@ -28,6 +30,7 @@ const mistakes = [
 export default function WhyMT5() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <PageSEO title="왜 MT5인가? MetaTrader 5 선택 이유" description="MT4 vs MT5 차이점, MT5를 선택해야 하는 이유, 해외선물 트레이더에게 최적인 이유를 설명합니다." path="/guides/why-mt5" />
       <Header />
       
       <main className="flex-1">
@@ -115,6 +118,12 @@ export default function WhyMT5() {
           </div>
         </div>
       </main>
+      <RelatedContent items={[
+          { title: "MT5 시작 전 준비", description: "브로커 선택과 계좌 개설 방법", href: "/guides/before-mt5", badge: "준비" },
+          { title: "MT5 PC 설치", description: "MT5 설치부터 로그인까지", href: "/guides/mt5-pc", badge: "설치" },
+          { title: "해외선물 기초", description: "선물거래 개념부터 시작하기", href: "/basics/futures", badge: "기초" }
+        ]} />
+
 
       <Footer />
     </div>

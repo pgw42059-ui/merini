@@ -13,6 +13,7 @@ import {
   Clock,
 } from "lucide-react";
 import { RelatedContent, RelatedItem } from "@/components/RelatedContent";
+import { PageSEO } from "@/components/PageSEO";
 
 const relatedItems: RelatedItem[] = [
   {
@@ -120,6 +121,7 @@ const CodeTag = ({ children }: { children: React.ReactNode }) => (
 const MT5Manual = () => {
   return (
     <div className="max-w-3xl">
+      <PageSEO title="MT5 사용 설명서 — 화면 구성 완전 정복" description="MetaTrader 5 화면 구성, 메뉴, 차트 설정 방법을 처음부터 차근차근 설명합니다." path="/guides/mt5-manual" />
 
       {/* 브레드크럼 */}
       <div className="flex items-center gap-2 text-xs text-muted-foreground mb-5">

@@ -16,6 +16,7 @@ import {
   Bot,
 } from "lucide-react";
 import { AdPlaceholder } from "@/components/AdPlaceholder";
+import { PageSEO } from "@/components/PageSEO";
 
 const guideGroups = [
   {
@@ -168,6 +169,7 @@ const whatYouLearn = [
 const Education = () => {
   return (
     <div className="max-w-3xl">
+      <PageSEO title="MT5 가이드 — 설치부터 주문까지 완전 정복" description="MetaTrader 5 가이드, 주문 방법, 지표 설정, 차트 분석까지 실전 트레이딩 가이드." path="/guides" />
       {/* 헤더 */}
       <div className="mb-8">
         <div className="flex items-center gap-2 text-xs text-muted-foreground mb-4">

@@ -13,6 +13,7 @@ import {
   Play,
 } from "lucide-react";
 import { RelatedContent, RelatedItem } from "@/components/RelatedContent";
+import { PageSEO } from "@/components/PageSEO";
 
 // ─── Media Slot ───────────────────────────────────────────────
 type MediaData = { image: string; youtube: string };
@@ -21,6 +22,7 @@ const MediaSlot = ({ media, label }: { media: MediaData; label: string }) => {
   if (media.youtube) {
     return (
       <div className="mt-5 rounded-xl overflow-hidden aspect-video">
+      <PageSEO title="MT5 모바일 앱 설치 및 사용법" description="iPhone·Android에서 MetaTrader 5 앱 설치와 기본 설정, 모바일 주문 방법을 안내합니다." path="/guides/mt5-mobile" isHowTo={true} />
         <iframe
           src={`https://www.youtube.com/embed/${media.youtube}`}
           className="w-full h-full"

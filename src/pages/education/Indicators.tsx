@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { BarChart2, Plus, Settings, Trash2, Info, ChevronLeft, ChevronRight, Clock } from "lucide-react";
+import { PageSEO } from "@/components/PageSEO";
+import { RelatedContent, RelatedItem } from "@/components/RelatedContent";
 
 const builtinIndicators = [
   {
@@ -64,6 +66,7 @@ const howToManage = [
 const Indicators = () => {
   return (
     <div className="max-w-3xl">
+      <PageSEO title="MT5 지표 사용법 완전 가이드" description="MetaTrader 5 내장 지표 추가·설정·삭제 방법과 이동평균, MACD, RSI 활용법을 안내합니다." path="/guides/indicators" isHowTo={true} />
 
       {/* 브레드크럼 */}
       <div className="flex items-center gap-2 text-xs text-muted-foreground mb-5">
@@ -210,6 +213,11 @@ const Indicators = () => {
           <ChevronRight className="w-4 h-4" />
         </Link>
       </div>
+      <RelatedContent items={[
+          { title: "주문 방법", description: "시장가·지정가·SL/TP 완전 가이드", href: "/guides/orders", badge: "가이드" },
+          { title: "트레이딩 전략", description: "추세 추종과 스캘핑 전략 기초", href: "/guides/strategy", badge: "가이드" },
+          { title: "리스크 관리", description: "자산 보호를 위한 리스크 전략", href: "/guides/risk", badge: "가이드" }
+        ]} />
     </div>
   );
 };

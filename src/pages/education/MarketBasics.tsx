@@ -1,5 +1,6 @@
 import { Clock } from "lucide-react";
 import { RelatedContent, RelatedItem } from "@/components/RelatedContent";
+import { PageSEO } from "@/components/PageSEO";
 
 const topics = [
   {
@@ -38,6 +39,7 @@ const relatedItems: RelatedItem[] = [
 const MarketBasics = () => {
   return (
     <>
+      <PageSEO title="해외선물 시장 기초 — 나스닥·금·오일 선물 이해" description="나스닥, S&P500, 골드, 오일 선물 시장의 구조와 거래 시간, 특성을 설명합니다." path="/guides/market-basics" />
       {/* Hero */}
       <section className="py-16 border-b border-border/50">
         <div className="container px-4">

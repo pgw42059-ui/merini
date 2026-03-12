@@ -1,6 +1,8 @@
 import { Layers, AlertTriangle, ChevronRight, ArrowRight, ArrowLeft, Clock, Info, XCircle, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { AdPlaceholder } from "@/components/AdPlaceholder";
+import { PageSEO } from "@/components/PageSEO";
+import { RelatedContent, RelatedItem } from "@/components/RelatedContent";
 
 const leverageExamples = [
   {
@@ -77,6 +79,7 @@ const riskRules = [
 const Leverage = () => {
   return (
     <article className="max-w-3xl">
+      <PageSEO title="레버리지란? 해외선물 레버리지 완전 이해" description="레버리지의 개념, 증거금 계산 방법, 리스크 관리까지 해외선물 레버리지의 모든 것." path="/basics/leverage" />
       {/* 브레드크럼 + 진행 표시 */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-2 text-xs text-muted-foreground">
@@ -187,6 +190,11 @@ const Leverage = () => {
                     </div>
                   ))}
                 </div>
+      <RelatedContent items={[
+          { title: "선물거래 기초", description: "선물 계약 개념부터 이해하기", href: "/basics/futures", badge: "기초" },
+          { title: "리스크 관리", description: "포지션 사이징과 손절 설정법", href: "/guides/risk", badge: "가이드" },
+          { title: "주문 방법", description: "시장가·지정가·SL/TP 설정", href: "/guides/orders", badge: "가이드" }
+        ]} />
               </div>
             );
           })}

@@ -7,6 +7,8 @@ import {
   AlertTriangle,
   Info
 } from "lucide-react";
+import { PageSEO } from "@/components/PageSEO";
+import { RelatedContent } from "@/components/RelatedContent";
 
 const resources = [
   {
@@ -69,6 +71,7 @@ const resources = [
 const Resources = () => {
   return (
     <>
+      <PageSEO title="해외선물 MT5 추천 리소스 — 도서·사이트·도구" description="해외선물 트레이딩 학습에 도움이 되는 추천 도서, 웹사이트, 분석 도구를 모아놓은 가이드." path="/guides/resources" />
         {/* Intro Section */}
         <section className="py-16 border-b border-border/50">
           <div className="container px-4">
@@ -222,6 +225,11 @@ const Resources = () => {
             </div>
           </div>
         </section>
+          <RelatedContent items={[
+          { title: "학습 로드맵", description: "단계별 학습 순서 확인하기", href: "/guides/roadmap", badge: "로드맵" },
+          { title: "해외선물 기초", description: "기초 개념부터 다시 확인하기", href: "/basics", badge: "기초" },
+          { title: "MT5 가이드", description: "실전 가이드 전체 목록", href: "/guides", badge: "가이드" }
+        ]} />
     </>
   );
 };

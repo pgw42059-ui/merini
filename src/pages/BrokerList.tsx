@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { CheckCircle2, XCircle, ExternalLink, Star, Info } from "lucide-react";
 import { brokers } from "@/data/brokers";
 import { AdPlaceholder } from "@/components/AdPlaceholder";
+import { PageSEO } from "@/components/PageSEO";
+import { RelatedContent, RelatedItem } from "@/components/RelatedContent";
 
 const BrokerList = () => {
   const featured = brokers.filter((b) => b.featured);
@@ -9,6 +11,7 @@ const BrokerList = () => {
 
   return (
     <div className="container px-4 py-8 max-w-5xl mx-auto">
+      <PageSEO title="해외선물 브로커 비교 추천 — MT5 지원 브로커" description="MT5를 지원하는 해외선물 브로커를 수수료, 레버리지, 안전성, 한국어 지원으로 비교 분석합니다." path="/brokers" />
       <div className="mb-8">
         <h1 className="text-2xl md:text-3xl font-bold text-foreground mb-3">브로커 비교</h1>
         <p className="text-muted-foreground leading-relaxed">
@@ -54,6 +57,12 @@ const BrokerList = () => {
               <BrokerCard key={broker.slug} broker={broker} featured={false} />
             ))}
           </div>
+      <RelatedContent items={[
+          { title: "계좌 유형", description: "브로커별 계좌 유형 이해하기", href: "/guides/account-types", badge: "가이드" },
+          { title: "MT5 시작 전 준비", description: "브로커 계좌 개설 준비사항", href: "/guides/before-mt5", badge: "준비" },
+          { title: "무료 상담 신청", description: "브로커 선택 1:1 무료 상담", href: "/consult", badge: "상담" }
+        ]} />
+
         </section>
       )}
 

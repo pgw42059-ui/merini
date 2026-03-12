@@ -2,6 +2,8 @@ import { BookOpen, Search, ChevronRight, ArrowLeft, ArrowRight } from "lucide-re
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { AdPlaceholder } from "@/components/AdPlaceholder";
+import { PageSEO } from "@/components/PageSEO";
+import { RelatedContent } from "@/components/RelatedContent";
 
 const terms = [
   // 기본
@@ -66,6 +68,7 @@ const Glossary = () => {
 
   return (
     <article className="max-w-3xl">
+      <PageSEO title="해외선물 MT5 용어 사전" description="해외선물과 MT5에서 자주 쓰이는 전문 용어를 한눈에 정리한 트레이더 용어 사전." path="/basics/glossary" />
       {/* 브레드크럼 */}
       <div className="flex items-center gap-2 text-xs text-muted-foreground mb-6">
         <Link to="/basics" className="hover:text-foreground transition-colors">기초 교육</Link>
@@ -183,6 +186,11 @@ const Glossary = () => {
           <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
         </Link>
       </div>
+          <RelatedContent items={[
+          { title: "선물거래 기초", description: "선물 핵심 개념 완전 정복", href: "/basics/futures", badge: "기초" },
+          { title: "FX 외환거래 기초", description: "FX 시장과 통화쌍 이해", href: "/basics/fx", badge: "기초" },
+          { title: "MT5 사용 설명서", description: "MT5 화면 구성 완전 정복", href: "/guides/mt5-manual", badge: "가이드" }
+        ]} />
     </article>
   );
 };

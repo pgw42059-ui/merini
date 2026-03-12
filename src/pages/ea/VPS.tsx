@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { Server, Globe, Monitor, Shield, AlertTriangle, CheckCircle2, ChevronLeft, ChevronRight } from "lucide-react";
+import { PageSEO } from "@/components/PageSEO";
+import { RelatedContent, RelatedItem } from "@/components/RelatedContent";
 
 const whyVPS = [
   { title: "24시간 중단 없는 운영", desc: "PC를 꺼도 VPS에서 MT5가 계속 실행됩니다." },
@@ -63,6 +65,7 @@ const setupSteps = [
 const EAVPS = () => {
   return (
     <div className="container px-4 py-8 max-w-4xl mx-auto">
+      <PageSEO title="EA VPS 설정 — 24시간 자동매매 운영 가이드" description="MT5 EA를 24시간 중단 없이 운영하기 위한 VPS 선택, 설치, MT5 연동 방법을 안내합니다." path="/ea/vps" isHowTo={true} />
       <div className="flex items-center gap-3 mb-3">
         <div className="p-2 rounded-lg bg-primary/10">
           <Server className="w-6 h-6 text-primary" />
@@ -188,6 +191,11 @@ const EAVPS = () => {
           <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
         </Link>
       </div>
+      <RelatedContent items={[
+          { title: "백테스트 가이드", description: "VPS 전에 반드시 백테스트 먼저", href: "/ea/backtest", badge: "검증" },
+          { title: "EA 사용 가이드", description: "VPS에서 EA 파라미터 최종 설정", href: "/ea/usage-guide", badge: "운영" },
+          { title: "브로커 비교", description: "VPS 최적화된 브로커 선택", href: "/brokers", badge: "브로커" }
+        ]} />
     </div>
   );
 };

@@ -1,5 +1,7 @@
 import { BookOpen, Target, Shield, Cpu, ArrowRight, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
+import { PageSEO } from "@/components/PageSEO";
+import { RelatedContent, RelatedItem } from "@/components/RelatedContent";
 
 const steps = [
   {
@@ -67,6 +69,7 @@ const steps = [
 export default function Roadmap() {
   return (
     <div className="container px-4">
+      <PageSEO title="해외선물 MT5 학습 로드맵 — 입문부터 EA까지" description="해외선물 완전 초보자가 MT5 설치, 주문, EA 자동매매까지 도달하는 단계별 학습 로드맵." path="/guides/roadmap" />
         {/* Hero Section */}
         <div className="text-center mb-16 max-w-2xl mx-auto">
           <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -148,6 +151,11 @@ export default function Roadmap() {
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
+      <RelatedContent items={[
+          { title: "MT5 PC 설치", description: "STEP 1: MT5 설치부터 시작", href: "/guides/mt5-pc", badge: "설치" },
+          { title: "주문 방법", description: "STEP 2: 실전 주문 방법", href: "/guides/orders", badge: "가이드" },
+          { title: "EA 설치 방법", description: "STEP 3: EA 자동매매 시작", href: "/ea/install", badge: "EA" }
+        ]} />
     </div>
   );
 }

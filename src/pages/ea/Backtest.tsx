@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import { BarChart3, Settings, FileText, AlertTriangle, ChevronLeft, ChevronRight } from "lucide-react";
+import { PageSEO } from "@/components/PageSEO";
+import { RelatedContent, RelatedItem } from "@/components/RelatedContent";
 
 const EABacktest = () => {
   return (
     <div className="container px-4 py-8 max-w-4xl mx-auto">
+      <PageSEO title="EA 백테스트 방법 — MT5 전략 테스터 가이드" description="MetaTrader 5 전략 테스터로 EA 백테스트 실행, 결과 분석, 최적화 방법을 안내합니다." path="/ea/backtest" isHowTo={true} />
       <h1 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
         백테스트 가이드
       </h1>
@@ -114,6 +117,11 @@ const EABacktest = () => {
           <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
         </Link>
       </div>
+      <RelatedContent items={[
+          { title: "EA 설치 방법", description: "백테스트할 EA 설치 방법", href: "/ea/install", badge: "설치" },
+          { title: "EA 사용 가이드", description: "백테스트 후 실전 운영 설정", href: "/ea/usage-guide", badge: "운영" },
+          { title: "VPS 설정", description: "검증된 EA를 VPS로 24시간 운영", href: "/ea/vps", badge: "운영" }
+        ]} />
     </div>
   );
 };

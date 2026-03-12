@@ -1,10 +1,12 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FileText } from "lucide-react";
+import { PageSEO } from "@/components/PageSEO";
 
 const Terms = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PageSEO title="이용약관 — 메린이 서비스 이용약관" description="메린이 서비스 이용약관입니다. 서비스 이용 전 반드시 확인해 주세요." path="/terms" />
       <Header />
       <main className="pt-20">
         <section className="py-16">

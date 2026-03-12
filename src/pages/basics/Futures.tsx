@@ -1,6 +1,8 @@
 import { TrendingUp, AlertTriangle, ChevronRight, ArrowRight, ArrowLeft, Clock, Info } from "lucide-react";
 import { Link } from "react-router-dom";
 import { AdPlaceholder } from "@/components/AdPlaceholder";
+import { PageSEO } from "@/components/PageSEO";
+import { RelatedContent } from "@/components/RelatedContent";
 
 const products = [
   {
@@ -71,6 +73,7 @@ const concepts = [
 const Futures = () => {
   return (
     <article className="max-w-3xl">
+      <PageSEO title="선물거래란? 해외선물 기초 완전 정복" description="선물 계약의 개념, 만기일, 롤오버까지 해외선물 입문자가 알아야 할 모든 것을 설명합니다." path="/basics/futures" />
       {/* 브레드크럼 + 진행 표시 */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-2 text-xs text-muted-foreground">
@@ -206,6 +209,11 @@ const Futures = () => {
           <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
         </Link>
       </div>
+          <RelatedContent items={[
+          { title: "FX 외환거래 기초", description: "FX 시장 구조와 통화쌍 이해", href: "/basics/fx", badge: "기초" },
+          { title: "레버리지란?", description: "증거금과 레버리지 계산 방법", href: "/basics/leverage", badge: "기초" },
+          { title: "해외선물 시장 기초", description: "나스닥·금·오일 선물 시장 이해", href: "/guides/market-basics", badge: "가이드" }
+        ]} />
     </article>
   );
 };

@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { ShoppingBag, Search, Star, BarChart3, Download, AlertTriangle, CheckCircle2, ChevronLeft, ChevronRight } from "lucide-react";
+import { PageSEO } from "@/components/PageSEO";
+import { RelatedContent, RelatedItem } from "@/components/RelatedContent";
 
 const sections = [
   {
@@ -44,6 +46,7 @@ const sections = [
 const EAMQL5Market = () => {
   return (
     <div className="container px-4 py-8 max-w-4xl mx-auto">
+      <PageSEO title="MQL5 마켓 — EA·인디케이터 구매 가이드" description="MQL5 마켓에서 EA와 인디케이터를 구매하고 MT5에 설치하는 방법을 단계별로 안내합니다." path="/ea/mql5-market" />
       <div className="flex items-center gap-3 mb-3">
         <div className="p-2 rounded-lg bg-primary/10">
           <ShoppingBag className="w-6 h-6 text-primary" />
@@ -78,6 +81,12 @@ const EAMQL5Market = () => {
                   </div>
                 ))}
               </div>
+      <RelatedContent items={[
+          { title: "EA 설치 방법", description: "구매한 EA 설치하는 방법", href: "/ea/install", badge: "설치" },
+          { title: "EA 사용 가이드", description: "EA 파라미터 설정 완전 가이드", href: "/ea/usage-guide", badge: "운영" },
+          { title: "백테스트 가이드", description: "구매 전 백테스트로 검증하기", href: "/ea/backtest", badge: "검증" }
+        ]} />
+
             </section>
           );
         })}

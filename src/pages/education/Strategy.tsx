@@ -1,5 +1,6 @@
 import { Clock } from "lucide-react";
 import { RelatedContent, RelatedItem } from "@/components/RelatedContent";
+import { PageSEO } from "@/components/PageSEO";
 
 const topics = [
   {
@@ -38,6 +39,7 @@ const relatedItems: RelatedItem[] = [
 const Strategy = () => {
   return (
     <>
+      <PageSEO title="해외선물 트레이딩 전략 기초" description="추세 추종, 역추세, 스캘핑 등 해외선물 기본 트레이딩 전략과 진입·청산 원칙을 설명합니다." path="/guides/strategy" />
       {/* Hero */}
       <section className="py-16 border-b border-border/50">
         <div className="container px-4">

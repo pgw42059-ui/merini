@@ -27,6 +27,7 @@ const MediaSlot = ({ image, youtube, label }: MediaSlotProps) => {
   if (youtube) {
     return (
       <div className="w-full aspect-video rounded-xl overflow-hidden border border-border/30 bg-black">
+      <PageSEO title="MT5 주문 방법 — 시장가·지정가·SL/TP 완전 가이드" description="MetaTrader 5에서 시장가, 지정가, 스톱 주문, 손절/익절 설정 방법을 상세히 설명합니다." path="/guides/orders" isHowTo={true} />
         <iframe
           className="w-full h-full"
           src={`https://www.youtube.com/embed/${youtube}`}
@@ -271,6 +272,8 @@ const ItemCard = ({ name, sub, desc, how, warn, warnType, color, bg, border, dot
     </div>
   </div>
 );
+import { PageSEO } from "@/components/PageSEO";
+import { RelatedContent, RelatedItem } from "@/components/RelatedContent";
 
 // ─── 메인 페이지 ──────────────────────────────────────────────────────────────
 
@@ -377,6 +380,11 @@ const Orders = () => {
           <ChevronRight className="w-4 h-4" />
         </Link>
       </div>
+      <RelatedContent items={[
+          { title: "MT5 PC 설치", description: "MT5 설치부터 로그인까지 7단계", href: "/guides/mt5-pc", badge: "설치" },
+          { title: "지표 사용법", description: "MT5 내장 지표 추가 및 설정", href: "/guides/indicators", badge: "가이드" },
+          { title: "계좌 유형", description: "Standard·ECN·Prime 차이 비교", href: "/guides/account-types", badge: "가이드" }
+        ]} />
     </div>
   );
 };

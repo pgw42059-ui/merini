@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { Download, FolderOpen, RefreshCw, MousePointer, CheckCircle2, AlertTriangle, ChevronLeft, ChevronRight } from "lucide-react";
+import { PageSEO } from "@/components/PageSEO";
+import { RelatedContent, RelatedItem } from "@/components/RelatedContent";
 
 const steps = [
   {
@@ -62,6 +64,7 @@ const steps = [
 const EAInstall = () => {
   return (
     <div className="container px-4 py-8 max-w-4xl mx-auto">
+      <PageSEO title="EA 설치 방법 — MT5 Expert Advisor 설치 가이드" description="MT5에 EA 파일(.ex5) 설치하고 차트에 적용하는 방법을 단계별 스크린샷과 함께 안내합니다." path="/ea/install" isHowTo={true} />
       <h1 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
         EA 설치 방법
       </h1>
@@ -146,6 +149,11 @@ const EAInstall = () => {
           <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
         </Link>
       </div>
+      <RelatedContent items={[
+          { title: "EA 사용 가이드", description: "파라미터 설정과 자동매매 활성화", href: "/ea/usage-guide", badge: "다음" },
+          { title: "백테스트 가이드", description: "설치 후 EA 성과 검증 방법", href: "/ea/backtest", badge: "검증" },
+          { title: "MT5 PC 설치", description: "MT5 먼저 설치하기", href: "/guides/mt5-pc", badge: "설치" }
+        ]} />
     </div>
   );
 };

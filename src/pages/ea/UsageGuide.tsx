@@ -10,6 +10,8 @@ import {
   ChevronRight,
   Info,
 } from "lucide-react";
+import { PageSEO } from "@/components/PageSEO";
+import { RelatedContent, RelatedItem } from "@/components/RelatedContent";
 
 const commonSettings = [
   {
@@ -92,6 +94,7 @@ const monitorItems = [
 const EAUsageGuide = () => {
   return (
     <div className="container px-4 py-8 max-w-4xl mx-auto">
+      <PageSEO title="EA 사용 가이드 — MT5 자동매매 설정 방법" description="EA 파라미터 설정, 리스크 설정, 자동매매 활성화 방법 등 MT5 EA 운영 완전 가이드." path="/ea/usage-guide" />
       <h1 className="text-2xl md:text-3xl font-bold text-foreground mb-3">EA 사용 가이드</h1>
       <p className="text-muted-foreground mb-10 leading-relaxed">
         EA를 차트에 적용할 때의 설정 창 사용법과 주요 파라미터, 실행 중 모니터링 방법까지 단계별로 설명합니다.
@@ -292,6 +295,11 @@ const EAUsageGuide = () => {
           <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
         </Link>
       </div>
+      <RelatedContent items={[
+          { title: "EA 설치 방법", description: "EA 파일 설치부터 시작하기", href: "/ea/install", badge: "이전" },
+          { title: "백테스트 가이드", description: "EA 운영 전 백테스트 필수", href: "/ea/backtest", badge: "검증" },
+          { title: "VPS 설정", description: "24시간 안정적 운영을 위한 VPS", href: "/ea/vps", badge: "운영" }
+        ]} />
     </div>
   );
 };

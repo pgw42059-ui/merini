@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { Bot, Download, Settings, BarChart3, Server, ShoppingBag, ArrowRight, AlertTriangle } from "lucide-react";
+import { PageSEO } from "@/components/PageSEO";
+import { RelatedContent, RelatedItem } from "@/components/RelatedContent";
 
 const guides = [
   {
@@ -42,6 +44,7 @@ const guides = [
 const EAOverview = () => {
   return (
     <div className="container px-4 py-8 max-w-4xl mx-auto">
+      <PageSEO title="EA 자동매매 완전 정복 — MT5 Expert Advisor" description="MetaTrader 5 EA 자동매매 설치, 설정, 백테스트, VPS 운영까지 완전 가이드." path="/ea" />
       {/* Header */}
       <div className="mb-8">
         <div className="flex items-center gap-3 mb-3">
@@ -127,6 +130,11 @@ const EAOverview = () => {
           <ArrowRight className="w-3.5 h-3.5" />
         </Link>
       </div>
+      <RelatedContent items={[
+          { title: "EA 설치 방법", description: "EA 파일 설치부터 차트 적용까지", href: "/ea/install", badge: "설치" },
+          { title: "백테스트 가이드", description: "전략 테스터로 EA 성과 검증", href: "/ea/backtest", badge: "검증" },
+          { title: "VPS 설정", description: "24시간 자동매매를 위한 VPS", href: "/ea/vps", badge: "운영" }
+        ]} />
     </div>
   );
 };
