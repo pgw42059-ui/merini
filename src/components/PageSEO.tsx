@@ -18,9 +18,16 @@ interface PageSEOProps {
   breadcrumbs?: BreadcrumbItem[];
   isHowTo?: boolean;
   faqs?: FAQItem[];
+  datePublished?: string;
+  dateModified?: string;
 }
 
 const BASE_URL = "https://merini.com";
+const PUBLISHER = {
+  "@type": "Organization",
+  name: "메린이",
+  url: BASE_URL,
+};
 
 export const PageSEO = ({
   title,
@@ -30,9 +37,11 @@ export const PageSEO = ({
   breadcrumbs,
   isHowTo = false,
   faqs,
+  datePublished = "2026-03-09",
+  dateModified = "2026-03-12",
 }: PageSEOProps) => {
   const url = `${BASE_URL}${path}`;
-  const fullTitle = path === "/" ? `${title} | 메린이` : `${title} | 메린이`;
+  const fullTitle = `${title} | 메린이`;
 
   // BreadcrumbList JSON-LD
   const defaultBreadcrumbs: BreadcrumbItem[] = [{ name: "홈", path: "/" }];
@@ -51,7 +60,7 @@ export const PageSEO = ({
     })),
   };
 
-  // WebPage or HowTo JSON-LD
+  // WebPage / HowTo / Article JSON-LD
   const pageSchema = isHowTo
     ? {
         "@context": "https://schema.org",
@@ -59,27 +68,46 @@ export const PageSEO = ({
         name: title,
         description,
         url,
+        datePublished,
+        dateModified,
+        publisher: PUBLISHER,
+      }
+    : type === "article"
+    ? {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: title,
+        description,
+        url,
+        datePublished,
+        dateModified,
+        author: PUBLISHER,
+        publisher: PUBLISHER,
+        isPartOf: { "@type": "WebSite", url: BASE_URL, name: "메린이" },
       }
     : {
         "@context": "https://schema.org",
-        "@type": type === "article" ? "Article" : "WebPage",
+        "@type": "WebPage",
         name: title,
         description,
         url,
+        datePublished,
+        dateModified,
         isPartOf: { "@type": "WebSite", url: BASE_URL, name: "메린이" },
       };
 
-  const faqSchema = faqs && faqs.length > 0
-    ? {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: faqs.map((faq) => ({
-          "@type": "Question",
-          name: faq.question,
-          acceptedAnswer: { "@type": "Answer", text: faq.answer },
-        })),
-      }
-    : null;
+  const faqSchema =
+    faqs && faqs.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: { "@type": "Answer", text: faq.answer },
+          })),
+        }
+      : null;
 
   return (
     <Helmet>
