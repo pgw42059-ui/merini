@@ -16,7 +16,7 @@ import {
 
 import heroTrader from "@/assets/01-hero-trader.png";
 import mentorStudent from "@/assets/03-mentor-student.png";
-import logoMark from "@/assets/04-logo-mark.png";
+import logoMark from "@/assets/logo-mark.png";
 import iconAnalysis from "@/assets/icon-analysis.png";
 import iconTrading from "@/assets/icon-trading.png";
 import iconSecurity from "@/assets/icon-security.png";
@@ -129,6 +129,8 @@ const Index = () => {
             src={heroTrader}
             alt="메린이 트레이더"
             className="absolute inset-0 w-full h-full object-cover object-center"
+            fetchPriority="high"
+            decoding="async"
           />
           {/* 왼쪽→투명 그라디언트 오버레이 */}
           <div className="absolute inset-0 bg-gradient-to-r from-background from-30% via-background/75 to-transparent" />
@@ -224,6 +226,8 @@ const Index = () => {
                   src={mentorStudent}
                   alt="메린이 - 멘토와 함께하는 학습"
                   className="w-full rounded-2xl shadow-xl border border-border/20"
+                  loading="lazy"
+                  decoding="async"
                 />
                 {/* 배지 */}
                 <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground text-xs font-semibold px-4 py-2 rounded-full shadow-lg">

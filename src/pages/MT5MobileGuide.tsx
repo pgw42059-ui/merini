@@ -35,7 +35,7 @@ const MediaSlot = ({ media, label }: { media: MediaData; label: string }) => {
   if (media.image) {
     return (
       <div className="mt-5 rounded-xl overflow-hidden bg-[#0f1117]">
-        <img src={media.image} alt={label} className="w-full object-contain" />
+        <img src={media.image} alt={label} className="w-full object-contain" loading="lazy" decoding="async" />
       </div>
     );
   }
