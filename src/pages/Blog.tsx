@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { PageSEO } from "@/components/PageSEO";
 import { FileText, Clock, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -39,6 +40,11 @@ const posts = [
 const Blog = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PageSEO
+        title="블로그 — MT5 전략·업데이트·가이드"
+        description="메린이 블로그: EA 업데이트, MT5 트레이딩 전략, 브로커 이슈, 실전 가이드 아카이브."
+        path="/blog"
+      />
       <Header />
       <main className="pt-20">
         {/* Hero */}

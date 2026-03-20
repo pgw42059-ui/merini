@@ -2,6 +2,7 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import { CheckCircle2, XCircle, ExternalLink, ArrowLeft, AlertTriangle, Info } from "lucide-react";
 import { brokers } from "@/data/brokers";
 import { AdPlaceholder } from "@/components/AdPlaceholder";
+import { PageSEO } from "@/components/PageSEO";
 
 const BrokerDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -13,6 +14,12 @@ const BrokerDetail = () => {
 
   return (
     <div className="container px-4 py-8 max-w-4xl mx-auto">
+      <PageSEO
+        title={`${broker.name} 브로커 상세 리뷰 — 스프레드·규제·플랫폼 비교`}
+        description={`${broker.name} 브로커 상세 분석: ${broker.tagline}. 규제기관, 최소 증거금, 스프레드, 플랫폼 비교.`}
+        path={`/brokers/${broker.slug}`}
+        type="article"
+      />
       {/* Back */}
       <Link
         to="/brokers"
