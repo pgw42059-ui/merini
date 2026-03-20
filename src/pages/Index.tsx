@@ -129,7 +129,7 @@ const Index = () => {
             src={heroTrader}
             alt="메린이 트레이더"
             className="absolute inset-0 w-full h-full object-cover object-center"
-            fetchPriority="high"
+            loading="eager"
             decoding="async"
           />
           {/* 왼쪽→투명 그라디언트 오버레이 */}
